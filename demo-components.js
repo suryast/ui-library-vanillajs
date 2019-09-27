@@ -15,7 +15,7 @@ export function heroExample() {
   return (
     container(
       header(`Vanilla JS Component Library`, `h1`),
-      header(`Hero`, `h2`)
+      header(`hero`, `h2`)
     ) +
     hero(
       container(
@@ -34,7 +34,7 @@ export function gridExample() {
   return (
     container(
       sectionDivider(),
-      header(`Grid System`, `h2`),
+      header(`grid system`, `h2`),
       row(
         `thirds`,
         `<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore molestias quos libero inventore quisquam vel, maiores ipsam eum dolorum maxime recusandae doloremque. Ducimus deleniti rem facilis. Error obcaecati modi alias.</p>`,
@@ -61,7 +61,7 @@ export function gridExample() {
       )
     ) +
     container(
-      header(`Features`, `h2`),
+      header(`featured cards`, `h2`),
       row(
         `thirds`,
         feature(
@@ -96,7 +96,7 @@ export function gridExample() {
 // Accordian and Tabs
 export function paginatedExample() {
   return container(
-    header(`Image & Text`, `h2`),
+    header(`image & text`, `h2`),
     row(
       `halves`,
       `<p style="${gridLocation(
@@ -115,6 +115,7 @@ export function paginatedExample() {
         `<p style="${gridLocation(
           2
         )}">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore molestias quos libero inventore quisquam vel, maiores ipsam eum dolorum maxime recusandae doloremque. Ducimus deleniti rem facilis. Error obcaecati modi alias. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>`
-    )
+    ),
+    sectionDivider()
   );
 }
