@@ -1,4 +1,4 @@
-import header from "./src/components/header";
+import library from "./content-components";
 import "./src/css/styles.css";
 
 const UI = {
@@ -8,5 +8,4 @@ const UI = {
   }
 };
 
-// UI.render(page());
-UI.render(header(`JS Component Library`, `h1`));
+UI.render(library());

@@ -1,3 +1,4 @@
-export default function header(text, tag = `h2`) {
-  return `<${tag}>${text}</${tag}>`;
+export default function header(headerText, tag = `h2`) {
+  // default is h2
+  return `<${tag}>${headerText}</${tag}>`;
 }
