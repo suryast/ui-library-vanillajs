@@ -13,6 +13,7 @@ Components available:
 - [ ] Single Page App menu and content area
 - [ ] Button
 - [ ] Checkbox
+- [x] Image
 - [x] Feature
 - [x] Header
 - [x] Hero

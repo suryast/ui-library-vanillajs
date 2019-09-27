@@ -1,4 +1,4 @@
-import { headerExample, gridExample } from "./content-components";
+import { heroExample, gridExample, paginatedExample } from "./demo-components";
 
 const UI = {
   render: function(content, where = "beforeend") {
@@ -7,5 +7,6 @@ const UI = {
   }
 };
 
-UI.render(headerExample());
+UI.render(heroExample());
 UI.render(gridExample());
+UI.render(paginatedExample());
