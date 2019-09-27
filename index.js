@@ -1,5 +1,4 @@
-import library from "./content-components";
-import "./src/css/styles.css";
+import { headerExample, gridExample } from "./content-components";
 
 const UI = {
   render: function(content, where = "beforeend") {
@@ -8,4 +7,5 @@ const UI = {
   }
 };
 
-UI.render(library());
+UI.render(headerExample());
+UI.render(gridExample());

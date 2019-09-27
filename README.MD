@@ -13,10 +13,10 @@ Components available:
 - [ ] Single Page App menu and content area
 - [ ] Button
 - [ ] Checkbox
-- [ ] Feature
-- [ ] Header
-- [ ] Hero
-- [ ] Grid
+- [x] Feature
+- [x] Header
+- [x] Hero
+- [x] Grid
 
 Reference: JavaScript Explained Component Library – https://codesandbox.io/s/z2r35wj9vm
 

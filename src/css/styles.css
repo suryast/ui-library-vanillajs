@@ -40,7 +40,7 @@
 html {
   /* default theme: light background, dark text, blue accent */
   --theme-hue: 0; /* white */
-  --accent-hue: 194; /* blue */
+  --accent-hue: 105; /* blue */
 
   --text-color-richer: hsl(var(--theme-hue), 0%, 5%); /* #0d0d0d		*/
   --text-color-normal: hsl(
@@ -163,7 +163,7 @@ html {
 .grid-container {
   position: relative;
   max-width: var(--grid-max-width);
-  margin: 0 auto;
+  margin: 0 1rem;
   padding: 20px;
   text-align: left;
   display: grid;
@@ -250,6 +250,7 @@ h4 {
   letter-spacing: -0.08rem;
 }
 h5 {
+  font-weight: bold;
   font-size: 1.8rem;
   line-height: 1.5;
   letter-spacing: -0.05rem;
@@ -582,37 +583,97 @@ there.
 
 /* For content-components.js 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.header {
+  padding: 0 1rem;
+}
+
 .container {
-  width: 70%;
+  width: 100%;
   margin: 2rem auto;
 }
 
+.border-bottom_thick {
+  border-bottom: 0.6rem solid black;
+}
+
 .border-bottom_thin {
-  margin: 4rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid black;
+  margin: 4rem auto;
+  padding-bottom: 0.2rem;
+  border-bottom: 0.2rem solid black;
 }
 
 .hero {
   background-color: #efefef;
   background-image: url("https://source.unsplash.com/1320x768/?tokyo,night");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
   margin: 0 0 2rem 0;
+  padding: 0 0 0 2rem;
   text-align: center;
   min-height: 540px;
   color: #fafafa;
-  position: relative;
 }
 
 .hero-container {
-  padding: 2rem;
-  left: 15rem;
+  padding: 0 0 0 1rem;
   background-color: rgb(77, 77, 77, 0.7);
-  width: 48%;
+  width: 60%;
+  max-height: 540px;
   position: absolute;
   bottom: 0;
 }
 
 p.hero-style {
   border-bottom: 0.6rem solid white;
+}
+
+/* Larger than mobile (default point when grid becomes active) */
+@media (min-width: 300px) {
+  .hero-container {
+    width: 80%;
+  }
+}
+
+@media (min-width: 600px) {
+  .container {
+    width: 90%;
+    margin: 2rem auto;
+  }
+  .hero-container {
+    width: 80%;
+  }
+}
+
+/* Larger than phablet */
+@media (min-width: 900px) {
+  .container {
+    width: 80%;
+    margin: 2rem auto;
+  }
+  .hero-container {
+    width: 70%;
+  }
+}
+
+/* Larger than tablet */
+@media (min-width: 1200px) {
+  .container {
+    width: 70%;
+    margin: 2rem auto;
+  }
+  .hero-container {
+    width: 60%;
+  }
+}
+
+.feature {
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.feature:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
