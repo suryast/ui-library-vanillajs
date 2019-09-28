@@ -23,6 +23,8 @@
 - Utilities
 - Clearing
 - Media Queries
+
+- Project Specific
 */
 
 /* ENV Variables
@@ -584,27 +586,27 @@ there.
 @media (min-width: 1200px) {
 }
 
-/* For content-components.js 
+/* Project Specific
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .header {
   padding: 0 1rem;
 }
-
 .container {
   width: 100%;
   margin: 2rem auto;
 }
 
+/* Content Separator*/
 .border-bottom_thick {
   border-bottom: 0.6rem solid black;
 }
-
 .border-bottom_thin {
   margin: 4rem auto;
   padding-bottom: 0.2rem;
   border-bottom: 0.2rem solid black;
 }
 
+/* Hero Component */
 .hero {
   background-color: #efefef;
   background-image: url("https://source.unsplash.com/1320x768/?tokyo");
@@ -618,7 +620,6 @@ there.
   min-height: 540px;
   color: #fafafa;
 }
-
 .hero-container {
   padding: 0 0 0 1rem;
   background-color: rgb(77, 77, 77, 0.7);
@@ -627,18 +628,15 @@ there.
   position: absolute;
   bottom: 0;
 }
-
 p.hero-style {
   border-bottom: 0.6rem solid white;
 }
 
-/* Larger than mobile (default point when grid becomes active) */
 @media (min-width: 300px) {
   .hero-container {
     width: 80%;
   }
 }
-
 @media (min-width: 600px) {
   .container {
     width: 90%;
@@ -648,8 +646,6 @@ p.hero-style {
     width: 80%;
   }
 }
-
-/* Larger than phablet */
 @media (min-width: 900px) {
   .container {
     width: 80%;
@@ -659,8 +655,6 @@ p.hero-style {
     width: 70%;
   }
 }
-
-/* Larger than tablet */
 @media (min-width: 1200px) {
   .container {
     width: 70%;
@@ -677,7 +671,6 @@ p.hero-style {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
-
 .feature:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
@@ -705,7 +698,6 @@ p.hero-style {
   transform: translateY(-50%);
   position: relative;
 }
-
 #modal #prev,
 #modal #next {
   background: black;
@@ -733,8 +725,6 @@ p.hero-style {
 }
 
 /* Tabs */
-.tabs {
-}
 .tabs ul {
   z-index: 100;
 }
@@ -745,7 +735,6 @@ p.hero-style {
   padding: 1rem 6rem;
   color: #ffffff;
 }
-
 .tabs li:hover {
   cursor: pointer;
   background: black;
@@ -753,7 +742,6 @@ p.hero-style {
 }
 .tabs section {
   margin-top: 0;
-
   display: none;
 }
 .tabs li.active {
