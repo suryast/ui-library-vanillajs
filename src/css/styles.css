@@ -272,6 +272,12 @@ p {
   border-bottom: 0.6rem solid black;
 }
 
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  width: 80%;
+}
 /* Larger than phablet */
 @media (min-width: 600px) {
   h1 {
@@ -601,7 +607,7 @@ there.
   border-bottom: 0.6rem solid black;
 }
 .border-bottom_thin {
-  margin: 4rem auto;
+  margin: 2rem auto;
   padding-bottom: 0.2rem;
   border-bottom: 0.2rem solid black;
 }

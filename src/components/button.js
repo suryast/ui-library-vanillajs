@@ -1,3 +1,3 @@
-export default function button(text = `Click Here`, className = `btn`) {
-  return `<button class="${className}">${text}</button>`;
+export default function button(text = `Click Here`, id = ``) {
+  return `<button id="${id}">${text}</button>`;
 }
