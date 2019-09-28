@@ -4,12 +4,8 @@ import hero from "./src/components/hero";
 import link from "./src/components/link";
 import feature from "./src/components/feature";
 import image from "./src/components/image";
-import {
-  tabs,
-  init as tabsInit,
-  handleTab,
-  demoTabs
-} from "./src/components/tabs";
+import { tabs, demoTabs } from "./src/components/tabs";
+import { init as videoInit, videoPlayer } from "./src/components/video";
 
 // Helpers
 import { position as gridLocation } from "./src/helpers/grid-position";
@@ -110,18 +106,38 @@ export function imageExample() {
       image({
         source: `https://source.unsplash.com/`,
         alt: `Seoul at Night`,
-        size: `230x230/?seoul,city`
-      }),
+        size: `300x300/?seoul,city`
+      })
+    ),
+    row(
+      `halves`,
+      `<p style="${gridLocation(1)}">${paragraph.long}</p>`,
       image({
         source: `https://source.unsplash.com/`,
         alt: `Busan at Night`,
-        size: `230x230/?busan,city`
-      }) + `<p style="${gridLocation(2)}">${paragraph.long}</p>`
+        size: `300x300/?busan,city`
+      })
     ),
     sectionDivider()
   );
 }
 
 export function tabExample() {
-  return container(row(`full`, tabs(demoTabs(), `tabs`)));
+  return container(
+    row(`full`, header(`accordions & tabs`, `h2`), tabs(demoTabs(), `tabs`))
+  );
+}
+
+export function videoExample() {
+  return container(
+    row(
+      `full`,
+      header(`video`, `h2`),
+      videoInit(
+        `/sample.990d2386.mp4`,
+        `Video by Miguel Á. Padriñán from Pexels`
+      )
+    ),
+    sectionDivider()
+  ); // Not sure why this is
 }
