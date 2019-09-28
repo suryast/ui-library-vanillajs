@@ -1,4 +1,11 @@
-import { heroExample, gridExample, paginatedExample } from "./demo-components";
+import {
+  heroExample,
+  gridExample,
+  imageExample,
+  tabExample
+} from "./demo-components";
+
+import { init as initTabs } from "./src/components/tabs";
 
 const UI = {
   render: function(content, where = "beforeend") {
@@ -9,4 +16,7 @@ const UI = {
 
 UI.render(heroExample());
 UI.render(gridExample());
-UI.render(paginatedExample());
+UI.render(imageExample());
+UI.render(tabExample());
+
+initTabs();

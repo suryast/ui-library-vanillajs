@@ -161,14 +161,13 @@ html {
 	 than with skeleton. Only basic 1-4 column grids are included.
 	 Any additional needs should be made using custom CSS directives */
 .grid-container {
-  position: relative;
   max-width: var(--grid-max-width);
   margin: 0 1rem;
-  padding: 20px;
+  padding: 1rem;
   text-align: left;
   display: grid;
-  grid-gap: 20px;
-  gap: 20px;
+  grid-gap: 2rem;
+  gap: 2rem;
 
   /* by default use min 200px wide columns auto-fit into width */
   grid-template-columns: minmax(200px, 1fr);
@@ -177,22 +176,25 @@ html {
 /* grids to 3 columns above mobile sizes */
 @media (min-width: 600px) {
   .grid-container {
-    grid-template-columns: repeat(3, 1fr);
     padding: 10px 0;
   }
 
   /* basic grids */
   .grid-container.fifths {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-auto-flow: row;
   }
   .grid-container.quarters {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-auto-flow: column;
   }
   .grid-container.thirds {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-flow: column;
   }
   .grid-container.halves {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-auto-flow: column;
   }
   .grid-container.full {
     grid-template-columns: 1fr;
@@ -256,6 +258,7 @@ h5 {
   letter-spacing: -0.05rem;
 }
 h6 {
+  font-weight: bold;
   font-size: 1.5rem;
   line-height: 1.6;
   letter-spacing: 0;
@@ -668,6 +671,7 @@ p.hero-style {
   }
 }
 
+/* Featured cards and images */
 .feature {
   padding: 2rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
@@ -676,4 +680,86 @@ p.hero-style {
 
 .feature:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+/* Modal and lightbox */
+#overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#modal {
+  background: white;
+  width: calc(90% - 2rem);
+  /* min-height: calc(50% - 2rem); */
+  max-height: 90%;
+  padding: 1rem;
+  left: 5%;
+  border: 2px #ccc solid;
+  position: absolute;
+  z-index: 200;
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+}
+
+#modal #prev,
+#modal #next {
+  background: black;
+  border: 1px white solid;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 500;
+  padding: 0.5rem;
+  font-size: 10px;
+  color: #ddd;
+  text-decoration: none;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#modal #prev {
+  left: 0;
+}
+#modal #next {
+  right: 0;
+}
+#modal #prev:hover,
+#modal #next:hover {
+  color: white;
+  box-shadow: 0 0 2px 1px gray;
+}
+
+/* Tabs */
+.tabs {
+}
+.tabs ul {
+  z-index: 100;
+}
+.tabs ul li {
+  display: inline-block;
+  background: #4d4d4d;
+  border: 2px solid white;
+  padding: 1rem 6rem;
+  color: #ffffff;
+}
+
+.tabs li:hover {
+  cursor: pointer;
+  background: black;
+  border: 2px solid var(--accent-color);
+}
+.tabs section {
+  margin-top: 0;
+
+  display: none;
+}
+.tabs li.active {
+  background-color: black;
+  border: 2px solid var(--accent-color);
+}
+.tabs section.active {
+  display: block;
 }

@@ -7,11 +7,11 @@ Components available:
 - [ ] A form that displays content to the console on submit – with Input and Button components
 - [ ] Media Player
 - [ ] Lightbox
-- [ ] Accordion
-- [ ] Modal
-- [ ] Tabs
+- [x] Accordion
+- [x] Modal
+- [x] Tabs
 - [ ] Single Page App menu and content area
-- [ ] Button
+- [x] Button
 - [ ] Checkbox
 - [x] Image
 - [x] Feature
