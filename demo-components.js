@@ -5,6 +5,7 @@ import link from "./src/components/link";
 import feature from "./src/components/feature";
 import image from "./src/components/image";
 import { tabs, demoTabs } from "./src/components/tabs";
+import { accordion, demoAccordions } from "./src/components/accordion";
 import { init as videoInit, videoPlayer } from "./src/components/video";
 
 // Helpers
@@ -123,8 +124,10 @@ export function imageExample() {
 }
 
 export function tabExample() {
-  return container(
-    row(`full`, header(`accordions & tabs`, `h2`), tabs(demoTabs(), `tabs`))
+  return (
+    container(
+      row(`full`, header(`accordions & tabs`, `h2`), tabs(demoTabs(), `tabs`))
+    ) + container(row(`full`, accordion(demoAccordions())), sectionDivider())
   );
 }
 

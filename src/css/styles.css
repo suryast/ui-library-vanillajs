@@ -757,3 +757,42 @@ p.hero-style {
 .tabs section.active {
   display: block;
 }
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+}
+.accordion section {
+  border: 2px solid var(--theme-hue);
+  border-bottom: none;
+}
+.accordion section:last-child {
+  border-bottom: 2px solid var(--theme-hue);
+}
+.accordion h5 {
+  padding: 1rem;
+  margin: 0;
+  font-weight: normal;
+  background-color: #4d4d4d;
+  color: #fafafa;
+  border: 2px solid var(--theme-hue);
+}
+.accordion section.active h5 {
+  background-color: black;
+  border: 2px solid var(--accent-color);
+}
+.accordion h5:hover {
+  cursor: pointer;
+  background-color: black;
+  border: 2px solid var(--accent-color);
+}
+.accordion .active h5:hover {
+  cursor: auto;
+}
+.accordion section .content {
+  padding: 1rem;
+  display: none;
+}
+.accordion section.active .content {
+  display: block;
+}

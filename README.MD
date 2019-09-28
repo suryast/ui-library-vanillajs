@@ -5,7 +5,7 @@
 Components available:
 
 - [ ] A form that displays content to the console on submit – with Input and Button components
-- [ ] Media Player
+- [x] Media Player
 - [ ] Lightbox
 - [x] Accordion
 - [x] Modal
