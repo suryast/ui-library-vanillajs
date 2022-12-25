@@ -6,9 +6,9 @@ import {
   videos
 } from "./compose";
 
-import { init as initTabs } from "./src/components/tabs";
-import { init as initAccordion } from "./src/components/accordion";
-import { videoPlayer } from "./src/components/video";
+import { init as initTabs } from "./src/components/Tab/tab";
+import { init as initAccordion } from "./src/components/Accordion/accordion";
+import { videoPlayer } from "./src/components/Video/video";
 
 const UI = {
   render: function(content, where = "beforeend") {

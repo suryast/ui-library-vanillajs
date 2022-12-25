@@ -1,4 +1,4 @@
-import button from "../components/button";
+import button from "../Button/button";
 
 export function init(filepath, credit = ``) {
   let videoPlayerElement = document.createElement("video");

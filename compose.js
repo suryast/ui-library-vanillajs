@@ -1,12 +1,13 @@
 import { container, row } from "./src/components/container";
-import header from "./src/components/header";
-import hero from "./src/components/hero";
+import header from "./src/components/Feature/header";
+import hero from "./src/components/Hero/hero";
 import link from "./src/components/link";
-import feature from "./src/components/feature";
-import image from "./src/components/image";
-import { tabs, demoTabs } from "./src/components/tabs";
-import { accordion, demoAccordions } from "./src/components/accordion";
-import { init as videoInit } from "./src/components/video";
+import feature from "./src/components/Feature/feature";
+import image from "./src/components/Image/image";
+import { tabs } from "./src/components/Tab/tab";
+import { exampleTabs } from "./src/components/Tab/exampleHelper";
+import { accordion, demoAccordions } from "./src/components/Accordion/accordion";
+import { init as videoInit } from "./src/components/Video/video";
 import { position as gridLocation } from "./src/helpers/grid-position";
 import { divider as sectionDivider } from "./src/helpers/divider";
 
@@ -125,7 +126,7 @@ export const images = () => {
 export const tabAccordions = () => {
   return (
     container(
-      row(`full`, header(`accordions & tabs`, `h2`), tabs(demoTabs(), `tabs`))
+      row(`full`, header(`accordions & tabs`, `h2`), tabs(exampleTabs(), `tabs`))
     ) + 
     container(
       row(`full`, accordion(demoAccordions())

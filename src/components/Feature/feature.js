@@ -1,6 +1,6 @@
 import header from "./header";
-import { position as gridLocation } from "../helpers/grid-position";
-import { styleText, styleBorder } from "../helpers/card-style";
+import { position as gridLocation } from "../../helpers/grid-position";
+import { styleText, styleBorder } from "../../helpers/card-style";
 
 export default function feature(feature, style) {
   return `<div class="feature" style="${gridLocation(
