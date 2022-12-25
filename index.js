@@ -1,10 +1,10 @@
 import {
-  heroExample,
-  gridExample,
-  imageExample,
-  tabExample,
-  videoExample
-} from "./demo-components";
+  heroImages,
+  grids,
+  images,
+  tabs,
+  videos
+} from "./compose";
 
 import { init as initTabs } from "./src/components/tabs";
 import { init as initAccordion } from "./src/components/accordion";
@@ -17,11 +17,11 @@ const UI = {
   }
 };
 
-UI.render(heroExample());
-UI.render(gridExample());
-UI.render(imageExample());
-UI.render(tabExample());
-UI.render(videoExample());
+UI.render(heroImages());
+UI.render(grids());
+UI.render(images());
+UI.render(tabs());
+UI.render(videos());
 
 initTabs();
 initAccordion();
