@@ -16,7 +16,7 @@ const EXAMPLE_TXT = {
 };
 
 // Hero section
-export function heroImages() {
+export const heroImages = () => {
   return (
     container(
       header(`Vanilla JS Component Library`, `h1`),
@@ -37,7 +37,7 @@ export function heroImages() {
 }
 
 // Grid system using CSS grid
-export function grids() {
+export const grids = () => {
   return (
     container(
       sectionDivider(),
@@ -96,7 +96,7 @@ export function grids() {
 }
 
 // Images with text
-export function images() {
+export const images = () => {
   return container(
     header(`image & text`, `h2`),
     row(
@@ -122,17 +122,20 @@ export function images() {
 }
 
 // Tabs
-export function tabs() {
+export const tabAccordions = () => {
   return (
     container(
       row(`full`, header(`accordions & tabs`, `h2`), tabs(demoTabs(), `tabs`))
-    ) + container(row(`full`, accordion(demoAccordions())), 
+    ) + 
+    container(
+      row(`full`, accordion(demoAccordions())
+    ), 
     sectionDivider())
   );
 }
 
 // Videos
-export function videos() {
+export const videos = () => {
   return container(
     row(
       `full`,

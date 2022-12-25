@@ -2,7 +2,7 @@ import {
   heroImages,
   grids,
   images,
-  tabs,
+  tabAccordions,
   videos
 } from "./compose";
 
@@ -20,7 +20,7 @@ const UI = {
 UI.render(heroImages());
 UI.render(grids());
 UI.render(images());
-UI.render(tabs());
+UI.render(tabAccordions());
 UI.render(videos());
 
 initTabs();
